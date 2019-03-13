@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Линус Торвальдс</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
+	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+	
+	<style>
+	#main,#back{position: relative;}
+		#main{
+			width:90%;
+			background-color:black;
+			height:600px;
+			z-index:2;
+			margin:auto;
+			margin-top:40px;
+			opacity: 0.6;
+		}
+		#back{
+			z-index:1;
+			top:-600px;
+			margin-left:20px;
+		}
+		
+	</style>
+</head>
+<body>
 
+	<div id="main">
+	
+	</div>
+		<div id="back">
+		<p id="example1"></p> 
+		<p id="example2"></p> 
+		<p id="ex3"></p>
+	</div>
+ 
+
+	<script>
+	$('#example1').typeIt({
+		strings: ["protected function sendRequestHeaders($type, $url, &$params)", "{","&emsp;if (!is_array($params)) {","&emsp;&emsp;$params = ['resultcb' => $params];"],
+		speed: 50,
+		autoStart: false,
+		waitUntilVisible: true
+	});
+	$('#example2').typeIt({
+     strings: ["This is a great string.", "But here is a better one."],
+     speed: 50,
+     breakLines: false,
+     autoStart: false
+	});
+
+</script>
+
+</body>
+
+</html>
