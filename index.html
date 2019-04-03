@@ -1,59 +1,84 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>����� ���������</title>
+<title>linux</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
-	
+
 	<style>
+	body{
+		background-color: black;
+	}
 	#main,#back{position: relative;}
 		#main{
 			width:90%;
-			background-color:black;
+			background-color:white;
 			height:600px;
 			z-index:2;
 			margin:auto;
 			margin-top:40px;
-			opacity: 0.6;
+			opacity: 0.0;
+			border-radius: 10px;
+
 		}
 		#back{
 			z-index:1;
 			top:-600px;
 			margin-left:20px;
 		}
-		
+		li{
+			margin: 20px;
+		}
+
 	</style>
 </head>
 <body>
 
 	<div id="main">
-	
+		<ul style="margin-top:10px;" class="list-unstyled">
+		  <li class="media">
+		    <div class="media-body">
+		      <h5 class="mt-0 mb-1">Биография</h5>
+					 Линус Торвальдс — финно-американский программист, хакер.
+					 Воодушевлённый прочтением книги Эндрю Таненбаума, посвящённой операционной системе Minix, Линус создал Linux — ядро операционной системы GNU/Linux, являющейся на данный момент самой распространённой из свободных операционных систем, а также наиболее популярной серверной ОС.
+					 С 1997 по 2003 год Линус работал в известной компании Transmeta. После этого организовал Open Source Development Labs. В данный момент работает в Linux Foundation (с 2007), где занимается разработкой ядра Linux... <a href="https://ru.wikipedia.org/wiki/Торвальдс,_Линус">Читалть дальше на википелии </a>
+
+		    </div>
+		  </li>
+		  <li class="media my-4">
+		    <img style="width: 68px;height: 80px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Tux.svg/800px-Tux.svg.png" class="mr-3" alt="...">
+		    <div class="media-body">
+		      <h5 class="mt-0 mb-1">Linux</h5>
+					Linux — семейство Unix-подобных операционных систем на базе ядра Linux, включающих тот или иной набор утилит и программ проекта GNU, и, возможно, другие компоненты. Как и ядро Linux, системы на его основе как правило создаются и распространяются в соответствии с моделью разработки свободного и открытого программного обеспечения. Linux-системы распространяются в основном бесплатно в виде различных дистрибутивов — в форме, готовой для установки и удобной для сопровождения и обновлений, — и имеющих свой набор системных и прикладных компонентов, как свободных, так возможно и собственнических.
+					Появившись как решения вокруг созданного в начале 1990-х годов ядра, уже с начала 2000-х годов системы Linux являются основными для суперкомпьютеров и серверов, расширяется применение их для встраиваемых систем и мобильных устройств, некоторое распространение системы получили и для персональных компьютеров... <a href="https://ru.wikipedia.org/wiki/Linux">Читалть дальше на википелии </a>
+
+		    </div>
+		  </li>
+		  <li class="media">
+		    <img style="width: 92px;height: 40px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/1920px-Git-logo.svg.png" class="mr-3" alt="...">
+		    <div class="media-body">
+		      <h5 class="mt-0 mb-1">Git</h5>
+					— распределённая система управления версиями. Проект был создан Линусом Торвальдсом для управления разработкой ядра Linux, первая версия выпущена 7 апреля 2005 года. На сегодняшний день его поддерживает Джунио Хамано.
+					Среди проектов, использующих Git — ядро Linux, Swift, Android, Drupal, Cairo, GNU Core Utilities, Mesa, Wine, Chromium, Compiz Fusion, FlightGear, jQuery, PHP, NASM, MediaWiki, DokuWiki, Qt, ряд дистрибутивов Linux.
+					Программа является свободной и выпущена под лицензией GNU GPL версии 2. По умолчанию используется TCP порт 9418...  <a href="https://ru.wikipedia.org/wiki/Git">Читалть дальше на википелии </a>
+
+		    </div>
+		  </li>
+		</ul>
+
+
 	</div>
 		<div id="back">
-		<p id="example1"></p> 
-		<p id="example2"></p> 
+		<p id="example1" style="color:#26ff00;"></p>
+		<p id="example2" style="color:red;"></p>
 		<p id="ex3"></p>
 	</div>
- 
 
-	<script>
-	$('#example1').typeIt({
-		strings: ["protected function sendRequestHeaders($type, $url, &$params)", "{","&emsp;if (!is_array($params)) {","&emsp;&emsp;$params = ['resultcb' => $params];"],
-		speed: 50,
-		autoStart: false,
-		waitUntilVisible: true
-	});
-	$('#example2').typeIt({
-     strings: ["This is a great string.", "But here is a better one."],
-     speed: 50,
-     breakLines: false,
-     autoStart: false
-	});
 
-</script>
+<script src="javascript.js"></script>
 
 </body>
 
